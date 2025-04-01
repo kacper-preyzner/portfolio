@@ -1,5 +1,8 @@
 <template>
-  <UCard class="h-full transition-transform project-card hover:scale-[1.02]">
+  <UCard
+    class="h-full transition-transform project-card hover:scale-[1.02]"
+    variant="subtle"
+  >
     <img
       :src="project.image"
       :alt="project.title"
