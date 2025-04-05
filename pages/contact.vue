@@ -46,25 +46,26 @@ const submitForm = async () => {
                     <div class="flex gap-3 items-center">
                         <UIcon
                             name="i-heroicons-envelope"
-                            class="w-6 h-6 text-emerald-500"
+                            class="w-6 h-6 text-primary-400"
                         />
                         <p>kacperpreyzner@gmail.com</p>
                     </div>
                     <div class="flex gap-3 items-center">
                         <UIcon
                             name="i-heroicons-map-pin"
-                            class="w-6 h-6 text-emerald-500"
+                            class="w-6 h-6 text-primary-400"
                         />
                         <p>Złotoryja, Poland</p>
                     </div>
                     <div class="flex gap-3 items-center">
                         <UIcon
                             name="i-heroicons-link"
-                            class="w-6 h-6 text-emerald-500"
+                            class="w-6 h-6 text-primary-400"
                         />
                         <NuxtLink
                             to="https://github.com/prezeswastaken?tab=repositories"
                             target="_about_blank"
+                            class="duration-300 hover:text-primary-400"
                             >github.com/prezeswastaken</NuxtLink
                         >
                     </div>
@@ -121,9 +122,7 @@ const submitForm = async () => {
                                     rows="5"
                                 />
                             </UFormField>
-                            <UButton type="submit" color="emerald" block
-                                >Send Message</UButton
-                            >
+                            <UButton type="submit" block>Send Message</UButton>
                         </div>
                     </form>
                 </UCard>

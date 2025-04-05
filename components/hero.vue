@@ -53,7 +53,7 @@ const onLoad = (container: Container) => {
             <ClientOnly>
                 <AnimatedText
                     text="Kacper Preyzner"
-                    className="text-emerald-500"
+                    className="text-primary-400"
                     :debug="false"
                 />
                 <AnimatedText
