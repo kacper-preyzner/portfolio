@@ -9,7 +9,7 @@ const form = ref({
 async function submit() {
     try {
         const { accessToken } = await $fetch<LoginResponse>(
-            "http://localhost:8000/login",
+            "https://backend.kacper-preyzner.pl/login",
             {
                 method: "POST",
                 body: form.value,
