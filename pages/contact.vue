@@ -16,7 +16,7 @@ const form = ref({
 
 async function sendMessage() {
     try {
-        $fetch("http://localhost:8000/message", {
+        $fetch("https://backend.kacper-preyzner.pl/message", {
             method: "POST",
             body: form.value,
         });
