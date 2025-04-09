@@ -7,6 +7,7 @@ definePageMeta({
 
 const messages = ref<Array<Message> | null>(null);
 onMounted(async () => {
+    console.log("Mounted");
     const token = localStorage.getItem("accessToken");
     if (token == null) {
         return navigateTo("/login");
@@ -19,12 +20,24 @@ onMounted(async () => {
     );
     console.log(messages.value);
 });
+
+const messageToDelete = ref<Message | null>(null);
+const showDeleteModal = computed(() => messageToDelete == null);
 </script>
 
 <template>
     <div>
-        <div>Messages</div>
-        <Message v-for="message in messages" :message="message" />
+        <UModal
+            v-model:open="showDeleteModal"
+            title="Are you sure?"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        >
+            <template #body>a </template>
+        </UModal>
+        <div>
+            <div>Messages</div>
+            <Message v-for="message in messages" :message="message" />
+        </div>
     </div>
 </template>
 

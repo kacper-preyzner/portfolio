@@ -14,9 +14,11 @@ const form = ref({
     message: "",
 });
 
+const toast = useToast();
+
 async function sendMessage() {
     try {
-        $fetch("https://backend.kacper-preyzner.pl/message", {
+        await $fetch("https://backend.kacper-preyzner.pl/message", {
             method: "POST",
             body: form.value,
         });
@@ -26,7 +28,10 @@ async function sendMessage() {
             topic: "",
             message: "",
         };
+        toast.add({ title: "Message sent succesfully!", type: "foreground" });
+        return navigateTo("/");
     } catch (e) {
+        toast.add({ title: "Something went wrong :(", type: "foreground" });
         console.log(e);
     }
 }
