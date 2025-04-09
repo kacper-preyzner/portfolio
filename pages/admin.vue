@@ -5,20 +5,20 @@ definePageMeta({
     middleware: ["admin"],
 });
 
+const config = useRuntimeConfig();
+
 const messages = ref<Array<Message> | null>(null);
 onMounted(async () => {
-    console.log("Mounted");
     const token = localStorage.getItem("accessToken");
     if (token == null) {
         return navigateTo("/login");
     }
     messages.value = await $fetch<Array<Message>>(
-        "https://backend.kacper-preyzner.pl/message",
+        `${config.public.backendUrl}/message`,
         {
             headers: { Authorization: `Bearer: ${token}` },
         },
     );
-    console.log(messages.value);
 });
 
 const messageToDelete = ref<Message | null>(null);

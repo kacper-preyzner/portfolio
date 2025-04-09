@@ -6,10 +6,12 @@ const form = ref({
     password: "",
 });
 
+const config = useRuntimeConfig();
+
 async function submit() {
     try {
         const { accessToken } = await $fetch<LoginResponse>(
-            "https://backend.kacper-preyzner.pl/login",
+            `${config.public.backendUrl}/login`,
             {
                 method: "POST",
                 body: form.value,

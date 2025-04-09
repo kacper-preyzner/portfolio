@@ -20,4 +20,10 @@ export default defineNuxtConfig({
 		lazy: false, // Disable lazy loading to load immediately
 		mode: "slim", // Use slim mode for better performance
 	},
+
+	runtimeConfig: {
+		public: {
+			backendUrl: "http://localhost:8000",
+		},
+	},
 });

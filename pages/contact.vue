@@ -16,9 +16,11 @@ const form = ref({
 
 const toast = useToast();
 
+const config = useRuntimeConfig();
+
 async function sendMessage() {
     try {
-        await $fetch("https://backend.kacper-preyzner.pl/message", {
+        await $fetch(`${config.public.backendUrl}/message`, {
             method: "POST",
             body: form.value,
         });
