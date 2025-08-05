@@ -70,10 +70,10 @@ const submitForm = async () => {
                             class="w-6 h-6 text-primary-400"
                         />
                         <NuxtLink
-                            to="https://github.com/prezeswastaken?tab=repositories"
+                            to="https://github.com/kacper-preyzner"
                             target="_about_blank"
                             class="duration-300 hover:text-primary-400"
-                            >github.com/prezeswastaken</NuxtLink
+                            >github.com/kacper-preyzner</NuxtLink
                         >
                     </div>
                 </div>

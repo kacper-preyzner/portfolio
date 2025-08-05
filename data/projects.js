@@ -30,7 +30,7 @@ export const projects = [
 		duration: "3 months",
 		role: "Backend developer",
 		demoUrl: null,
-		codeUrl: "https://github.com/prezeswastaken/lolify",
+		codeUrl: "https://github.com/kacper-preyzner/lolify",
 	},
 	{
 		id: 2,
@@ -67,7 +67,7 @@ export const projects = [
 		duration: "3 months",
 		role: "Backend Developer",
 		demoUrl: null,
-		codeUrl: "https://github.com/prezeswastaken/kebapp.php",
+		codeUrl: "https://github.com/kacper-preyzner/kebapp.php",
 	},
 	{
 		id: 3,
@@ -85,6 +85,6 @@ export const projects = [
 		type: "Side project",
 		duration: "2 days",
 		role: "Solo developer",
-		codeUrl: "https://github.com/prezeswastaken/sorting-visualizer",
+		codeUrl: "https://github.com/kacper-preyzner/sorting-visualizer",
 	},
 ];

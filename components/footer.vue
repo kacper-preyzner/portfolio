@@ -31,7 +31,7 @@ const socials = [
     {
         name: "GitHub",
         icon: "i-simple-icons-github",
-        url: "https://github.com/prezeswastaken",
+        url: "https://github.com/kacper-preyzner",
     },
 ];
 </script>

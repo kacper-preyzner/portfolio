@@ -22,7 +22,7 @@ onMounted(async () => {
 });
 
 const messageToDelete = ref<Message | null>(null);
-const showDeleteModal = computed(() => messageToDelete == null);
+const showDeleteModal = computed(() => messageToDelete.value !== null);
 </script>
 
 <template>
